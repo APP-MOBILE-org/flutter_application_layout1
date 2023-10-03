@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -24,7 +26,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue[50],
-      body: const SafeArea(
+      body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(40),
           child: Column(
@@ -33,6 +35,7 @@ class Home extends StatelessWidget {
                 padding: EdgeInsets.only(top: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  // ignore: prefer_const_literals_to_create_immutables
                   children: <Widget>[
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -52,6 +55,15 @@ class Home extends StatelessWidget {
                       radius: 35,
                     )
                   ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 20),
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ],
